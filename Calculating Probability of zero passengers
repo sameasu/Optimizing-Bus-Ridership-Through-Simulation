@@ -14,7 +14,10 @@ def passengers(stops):
             passenger+=1
         elif prob2<=0.5:
             passenger+=0
-    return passenger
+        if passenger > 0:
+            return passenger
+        else:
+            return 0
 
 stops=10
 iterations = [passengers(stops) for _ in range(1000000) ]
